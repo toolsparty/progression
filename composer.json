@@ -1,0 +1,15 @@
+{
+  "name": "devtoolsparty/progression",
+  "description": "",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Dmitry Zolotarev",
+      "email": "dmitriy.zolotarev@inbox.ru"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "5.5.*"
+  }
+}
