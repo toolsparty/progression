@@ -9,8 +9,8 @@ namespace DevToolsParty\Progress;
 interface NumericProgression {
     /**
      * Возвращает сумму всех элементов последовательности до n-го члена
-     * @param $n
+     * @param $length
      * @return int|float
      */
-    public function getSum($n);
+    public function getSum($length);
 }

@@ -8,19 +8,15 @@ namespace DevToolsParty\Progress;
  */
 class ArithmeticProgression extends Progression implements NumericProgression {
 
+    use Utils;
+
     /**
      * @inheritdoc
      * ArithmeticProgression constructor.
      */
     public function __construct($a, $difference = 0, $length = null)
     {
-        if (!is_numeric($a)) {
-            throw new ProgressionException("Parameter 'a' is not numeric");
-        }
-
-        if (!is_numeric($difference)) {
-            throw new ProgressionException("Parameter 'difference' is not numeric");
-        }
+        Utils::checkParams($a, $difference);
 
         parent::__construct($a, $difference, $length);
     }
@@ -56,9 +52,8 @@ class ArithmeticProgression extends Progression implements NumericProgression {
      */
     public static function isProgression(array $sequence): bool
     {
-        $isCheck = self::checkItemsTypes($sequence);
+        $isCheck = self::checkIsNumericItems($sequence);
         $n = count($sequence);
-//        var_dump($isCheck);
 
         if ($isCheck && $n > 2) {
             $c = mt_rand(1, $n - 1);
@@ -85,22 +80,5 @@ class ArithmeticProgression extends Progression implements NumericProgression {
         return self::isProgression($sequence) ? $sequence[1] - $sequence[0] : null;
     }
 
-    /**
-     * Проверяет последовательность на соответствии типам integer и/или float
-     * @param array $sequence - массив с последовательностью
-     * @return bool
-     */
-    protected static function checkItemsTypes(array $sequence): bool
-    {
-        $isCheck = true;
-        $callback = function (&$item, $key) use (&$isCheck) {
-            if ($isCheck && !is_numeric($item)) {
-                $isCheck = false;
-            }
-        };
 
-        array_walk($sequence, $callback);
-
-        return $isCheck;
-    }
 }
