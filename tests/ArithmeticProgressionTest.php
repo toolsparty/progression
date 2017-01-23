@@ -2,6 +2,7 @@
 
 require_once '../src/Progression.php';
 require_once '../src/NumericProgression.php';
+require_once '../src/Utils.php';
 require_once '../src/ArithmeticProgression.php';
 
 use DevToolsParty\Progress\Progression;
@@ -24,19 +25,13 @@ class ArithmeticProgressionTest extends PHPUnit_Framework_TestCase {
         $this->assertFalse(ArithmeticProgression::isProgression($arr));
 
         $seq = Progression::prepareSequence($arr);
-
         $this->assertEquals($seq, [1,2,3,4,5,6]);
-
         $this->assertTrue(ArithmeticProgression::isProgression($seq));
 
         $str = '1 3 5 7 9';
-
         $seq = Progression::prepareSequence($str);
-
         $this->assertEquals($seq, [1,3,5,7,9]);
-
         $this->assertTrue(ArithmeticProgression::isProgression($seq));
-
         $this->assertFalse(ArithmeticProgression::isProgression(array_merge($seq, [8, 9])));
 
         $seq[] = '111';

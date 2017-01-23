@@ -135,7 +135,7 @@ abstract class Progression {
      * @param int $n - номер члена прогресии
      * @return mixed
      */
-    abstract public function getItem($n);
+    abstract public function getItem($n = 1);
 
     /**
      * Возвращает массив с элементами последовательности до n-го члена
