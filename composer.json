@@ -4,6 +4,7 @@
   "description": "Library for determining the type of sequence, and tools for working with progressions",
   "keywords": ["sequence", "progression"],
   "homepage": "https://github.com/devtoolsparty/progression",
+  "minimum-stability": "alpha",
   "license": "MIT",
   "authors": [
     {
