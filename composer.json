@@ -5,7 +5,7 @@
   "keywords": ["sequence", "progression"],
   "homepage": "https://github.com/devtoolsparty/progres",
   "version": "1.0",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
     {
