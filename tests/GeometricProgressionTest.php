@@ -11,7 +11,8 @@ use DevToolsParty\Progress\GeometricProgression;
 
 
 class GeometricProgressionTest extends PHPUnit_Framework_TestCase {
-    public function testIsProgression() {
+    public function testIsProgression()
+    {
         $arr = [
             'one' => 1,
             'tow' => 3,
@@ -23,21 +24,22 @@ class GeometricProgressionTest extends PHPUnit_Framework_TestCase {
 
         $this->assertFalse(GeometricProgression::isProgression($arr));
         $seq = Progression::prepareSequence($arr);
-        $this->assertEquals($seq, [1,3,9,27,81,243]);
+        $this->assertEquals($seq, [1, 3, 9, 27, 81, 243]);
 
         $this->assertTrue(GeometricProgression::isProgression($seq));
 
         $str = '5 10 20 40 80 160 320 640 1280 2560 5120';
 
         $seq = Progression::prepareSequence($str);
-        $this->assertEquals($seq, [5,10,20,40,80,160,320,640,1280,2560,5120]);
+        $this->assertEquals($seq, [5, 10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120]);
         $this->assertTrue(GeometricProgression::isProgression($seq));
 
         $this->assertTrue(GeometricProgression::isProgression(array_merge($seq, [10240])));
         $this->assertFalse(GeometricProgression::isProgression(array_merge($seq, [5000])));
     }
 
-    public function testProgression() {
+    public function testProgression()
+    {
         $progression = new GeometricProgression(7, 9);
         $this->assertEquals($progression->getItem(), 7);
         $this->assertEquals($progression->getItem(3), 567);

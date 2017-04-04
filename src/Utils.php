@@ -24,8 +24,8 @@ trait Utils {
     }
 
     /**
-     * Проверяет последовательность на соответствии типам integer и/или float
-     * @param array $sequence - массив с последовательностью
+     * Checks the sequence according to the types integer and / or float
+     * @param array $sequence - array with sequence
      * @return bool
      */
     protected static function checkIsNumericItems(array $sequence): bool

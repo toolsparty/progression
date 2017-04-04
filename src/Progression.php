@@ -3,34 +3,35 @@
 namespace DevToolsParty\Progress;
 
 /**
- * Class Progression определяет общие свойства для прогрессий
+ * Class Progression
+ * common properties for progressions
  * @package DevToolsParty\Progress
  */
 abstract class Progression {
 
     /**
-     * Первый член арифметической прогрессии
+     * The first term of an arithmetic progression
      * @var int|float|string
      */
     protected $a;
 
     /**
-     * Шаг прогрессии
+     * Step progression
      * @var int|float
      */
     protected $difference = 0;
 
     /**
-     * Длина последовательности
+     * Sequence length
      * @var int|null
      */
     protected $length;
 
     /**
      * Progression constructor.
-     * @param $a - первый член прогресии
-     * @param int|float $difference - шаг прогресии
-     * @param int|null $length - длинна прогресии
+     * @param $a - first member of the progression
+     * @param int|float $difference - step progression
+     * @param int|null $length - progression length
      * @throws ProgressionException
      */
     public function __construct($a, $difference = 0, $length = null)
@@ -42,8 +43,8 @@ abstract class Progression {
     }
 
     /**
-     * Устанавливает длину последовательности
-     * @param int $length - длина последовательности
+     * Sets the length of the sequence
+     * @param int $length - progression length
      * @throws ProgressionException
      */
     public function setLength($length)
@@ -56,7 +57,7 @@ abstract class Progression {
     }
 
     /**
-     * Возвращает значение длины последовательности
+     * Returns the value of the sequence length
      * @return int|null
      */
     public function getLength()
@@ -65,22 +66,22 @@ abstract class Progression {
     }
 
     /**
-     * Прогрессия возрастающая
+     * Progression increasing
      */
     const TYPE_INCREASING = 1;
 
     /**
-     * Прогрессия убывающая
+     * Progression decreasing
      */
     const TYPE_DECREASING = -1;
 
     /**
-     * Стационарная прогрессия
+     * Stationary progression
      */
     const TYPE_STATIONARY = 0;
 
     /**
-     * Возвращает тип прогрессии
+     * Returns the type of progression
      * @return int
      */
     public function getType(): int
@@ -95,15 +96,15 @@ abstract class Progression {
     }
 
     /**
-     * разделитель для последовательности в строке по умолчанию
+     * Separator for the sequence in the default row
      */
     const DEFAULT_DELIMITER = ' ';
 
     /**
-     * Метод подготавливает строку или массив для использования в потомках
-     * @param array|string $sequence - последовательность
-     * @param string $delimiter - разделитель строки
-     * @return array - массив с последовательностью
+     * The method prepares a string or array for use in child classes
+     * @param array|string $sequence - sequence
+     * @param string $delimiter - string separator
+     * @return array - sequence as an array
      */
     public static function prepareSequence($sequence, $delimiter = self::DEFAULT_DELIMITER): array
     {
@@ -117,7 +118,7 @@ abstract class Progression {
     }
 
     /**
-     * Выводит последовательность строкой
+     * Displays the line sequence
      * @return string
      * @throws ProgressionException
      */
@@ -131,28 +132,28 @@ abstract class Progression {
     }
 
     /**
-     * Возвращает n-ый член прогрессии
-     * @param int $n - номер члена прогресии
+     * Returns the nth member of the progression
+     * @param int $n - progression member number
      * @return mixed
      */
     abstract public function getItem($n = 1);
 
     /**
-     * Возвращает массив с элементами последовательности до n-го члена
-     * @param int $n - номер элемента последовательности
+     * Returns an array with elements of the sequence up to the nth progression member
+     * @param int $n - sequence element number
      * @return array
      */
     abstract public function getItems($n): array;
 
     /**
-     * возвращает true если последовательность является прогрессией, false - если нет
-     * @param array $sequence - массив последовательность
+     * Returns true if the sequence is a progression, false - if not
+     * @param array $sequence - array sequence
      * @return bool
      */
     abstract public static function isProgression(array $sequence): bool;
 
     /**
-     * Возвращает шаг(разность) последовательности
+     * Returns the step (difference) of the sequence
      * @param array $sequence
      * @return int|float|null
      */

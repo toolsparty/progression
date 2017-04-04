@@ -1,0 +1,49 @@
+#!/usr/bin/env php
+<?php
+
+require_once '../src/Progression.php';
+require_once '../src/Utils.php';
+require_once '../src/NumericProgression.php';
+require_once '../src/ArithmeticProgression.php';
+require_once '../src/GeometricProgression.php';
+require_once '../src/CharProgression.php';
+
+use DevToolsParty\Progress\Progression;
+use DevToolsParty\Progress\ArithmeticProgression;
+use DevToolsParty\Progress\GeometricProgression;
+use DevToolsParty\Progress\CharProgression;
+
+$delimiter = Progression::DEFAULT_DELIMITER;
+
+switch ($argc) {
+    case 2:
+        if (!empty($argv[1])) {
+            $str = $argv[1];
+        } else {
+
+        }
+        break;
+    case 4:
+        if ($argv[1] == '-d' && !empty($argv[2]) && !empty($argv[3])) {
+            $delimiter = $argv[2];
+            $str = $argv[3];
+        } else {
+
+        }
+        break;
+    default:
+        echo "You must pass at least one parameter, for example \"php progression '1 2 3 4 5'\"" . PHP_EOL;
+        exit;
+}
+
+$seq = Progression::prepareSequence($str, $delimiter);
+
+if (ArithmeticProgression::isProgression($seq)) {
+    echo "The sequence is an arithmetic progression" . PHP_EOL;
+} elseif (GeometricProgression::isProgression($seq)) {
+    echo "The sequence is a geometric progression" . PHP_EOL;
+} elseif (CharProgression::isProgression($seq)) {
+    echo "The sequence is a progression" . PHP_EOL;
+} else {
+    echo "The sequence is not a progression" . PHP_EOL;
+}

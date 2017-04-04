@@ -3,12 +3,12 @@
 namespace DevToolsParty\Progress;
 
 /**
- * Interface NumericProgression содержит определния для числовых прогрессий
+ * Interface NumericProgression It contains definitions for numerical progressions
  * @package DevToolsParty\Progress
  */
 interface NumericProgression {
     /**
-     * Возвращает сумму всех элементов последовательности до n-го члена
+     * Returns the sum of all elements of a sequence up to the nth member
      * @param $length
      * @return int|float
      */

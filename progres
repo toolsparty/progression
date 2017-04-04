@@ -1,9 +1,0 @@
-#!/usr/bin/env php
-<?php
-
-require_once 'vendor/autoload.php';
-
-require_once './src/Progression.php';
-require_once './src/ArithmeticProgression.php';
-require_once './src/GeometricProgression.php';
-require_once './src/CharProgression.php';

@@ -50,7 +50,7 @@ class GeometricProgression extends Progression implements NumericProgression {
         $items = [];
 
         for ($i = 1; $i <= $n; ++$i) {
-            $items[$i-1] = $this->a * pow($this->difference, $i-1);
+            $items[$i - 1] = $this->a * pow($this->difference, $i - 1);
         }
 
         return $items;
@@ -73,7 +73,7 @@ class GeometricProgression extends Progression implements NumericProgression {
      */
     public function getProduct($n)
     {
-        return pow($this->a * $this->getItem($n), $n/2);
+        return pow($this->a * $this->getItem($n), $n / 2);
     }
 
     /**
@@ -88,7 +88,7 @@ class GeometricProgression extends Progression implements NumericProgression {
 
         if ($isCheck && $n > 2) {
             try {
-                $progression = new self($sequence[0], $sequence[1]/$sequence[0]);
+                $progression = new self($sequence[0], $sequence[1] / $sequence[0]);
 
                 return ($progression->getSum($n) == array_sum($sequence) && $progression->getProduct($n) == array_product($sequence));
             } catch (\Exception $e) {
@@ -108,6 +108,6 @@ class GeometricProgression extends Progression implements NumericProgression {
      */
     public static function getDifference(array $sequence)
     {
-        return $sequence[1] / $sequence[0];
+        return self::isProgression($sequence) ? $sequence[1] / $sequence[0] : null;
     }
 }

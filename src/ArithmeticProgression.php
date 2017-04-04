@@ -79,6 +79,4 @@ class ArithmeticProgression extends Progression implements NumericProgression {
     {
         return self::isProgression($sequence) ? $sequence[1] - $sequence[0] : null;
     }
-
-
 }
