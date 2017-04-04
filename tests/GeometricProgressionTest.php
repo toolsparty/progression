@@ -6,8 +6,8 @@ require_once '../src/Utils.php';
 require_once '../src/GeometricProgression.php';
 
 
-use DevToolsParty\Progress\Progression;
-use DevToolsParty\Progress\GeometricProgression;
+use DevToolsParty\Progression\Progression;
+use DevToolsParty\Progression\GeometricProgression;
 
 
 class GeometricProgressionTest extends PHPUnit_Framework_TestCase {

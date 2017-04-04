@@ -4,8 +4,8 @@ require_once '../src/Progression.php';
 require_once '../src/Utils.php';
 require_once '../src/CharProgression.php';
 
-use DevToolsParty\Progress\Progression;
-use DevToolsParty\Progress\CharProgression;
+use DevToolsParty\Progression\Progression;
+use DevToolsParty\Progression\CharProgression;
 
 
 class CharProgressionTest extends PHPUnit_Framework_TestCase {

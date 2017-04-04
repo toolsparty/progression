@@ -5,8 +5,8 @@ require_once '../src/NumericProgression.php';
 require_once '../src/Utils.php';
 require_once '../src/ArithmeticProgression.php';
 
-use DevToolsParty\Progress\Progression;
-use DevToolsParty\Progress\ArithmeticProgression;
+use DevToolsParty\Progression\Progression;
+use DevToolsParty\Progression\ArithmeticProgression;
 
 /**
  * Class ArithmeticProgressionTest
