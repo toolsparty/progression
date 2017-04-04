@@ -8,8 +8,10 @@ use ToolsParty\Progression\Progression;
 use ToolsParty\Progression\CharProgression;
 
 
-class CharProgressionTest extends PHPUnit_Framework_TestCase {
-    public function testIsProgression() {
+class CharProgressionTest extends PHPUnit_Framework_TestCase
+{
+    public function testIsProgression()
+    {
         $arr = [
             'one' => 'a',
             'c',
@@ -30,7 +32,8 @@ class CharProgressionTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue(CharProgression::isProgression($seq));
     }
 
-    public function testProgression() {
+    public function testProgression()
+    {
         $progression = new CharProgression('a', 1);
         $this->assertEquals($progression->getItems(5), ['a', 'b', 'c', 'd', 'e']);
 

@@ -11,7 +11,8 @@ use ToolsParty\Progression\ArithmeticProgression;
 /**
  * Class ArithmeticProgressionTest
  */
-class ArithmeticProgressionTest extends PHPUnit_Framework_TestCase {
+class ArithmeticProgressionTest extends PHPUnit_Framework_TestCase
+{
     public function testIsProgression()
     {
         $arr = [

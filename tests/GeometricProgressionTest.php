@@ -10,7 +10,8 @@ use ToolsParty\Progression\Progression;
 use ToolsParty\Progression\GeometricProgression;
 
 
-class GeometricProgressionTest extends PHPUnit_Framework_TestCase {
+class GeometricProgressionTest extends PHPUnit_Framework_TestCase
+{
     public function testIsProgression()
     {
         $arr = [

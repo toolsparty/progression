@@ -6,14 +6,15 @@ namespace ToolsParty\Progression;
  * Class Utils
  * @package ToolsParty\Progression
  */
-trait Utils {
-
+trait Utils
+{
     /**
      * @param $a
      * @param $difference
      * @throws ProgressionException
      */
-    public static function checkParams($a, $difference) {
+    public static function checkParams($a, $difference)
+    {
         if (!is_numeric($a)) {
             throw new ProgressionException("Parameter 'a' is not numeric");
         }

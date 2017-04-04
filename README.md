@@ -2,4 +2,6 @@
 
 ## Install
 
-> composer require toolsparty/progression:dev-master
+```
+composer require toolsparty/progression:dev-master
+```

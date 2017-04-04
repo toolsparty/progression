@@ -6,8 +6,8 @@ namespace ToolsParty\Progression;
  * Class GeometricProgression
  * @package ToolsParty\Progression
  */
-class GeometricProgression extends Progression implements NumericProgression {
-
+class GeometricProgression extends Progression implements NumericProgression
+{
     use Utils;
 
     /**

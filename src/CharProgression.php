@@ -6,8 +6,8 @@ namespace ToolsParty\Progression;
  * Class CharProgression
  * @package ToolsParty\Progression
  */
-class CharProgression extends Progression {
-
+class CharProgression extends Progression
+{
     /**
      * CharProgression constructor.
      * @param mixed $a
@@ -38,7 +38,7 @@ class CharProgression extends Progression {
     {
         $items = [];
 
-        for ($i = ord($this->a), $j = 0; $i < ord($this->a) + $n*$this->difference; $i += $this->difference, ++$j) {
+        for ($i = ord($this->a), $j = 0; $i < ord($this->a) + $n * $this->difference; $i += $this->difference, ++$j) {
             $items[$j] = chr($i);
         }
 

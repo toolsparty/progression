@@ -7,8 +7,8 @@ namespace ToolsParty\Progression;
  * common properties for progressions
  * @package ToolsParty\Progression
  */
-abstract class Progression {
-
+abstract class Progression
+{
     /**
      * The first term of an arithmetic progression
      * @var int|float|string
