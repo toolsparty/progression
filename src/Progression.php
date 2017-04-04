@@ -1,6 +1,6 @@
 <?php
 
-namespace DevToolsParty\Progress;
+namespace DevToolsParty\Progression;
 
 /**
  * Class Progression
