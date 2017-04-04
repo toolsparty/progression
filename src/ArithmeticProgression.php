@@ -23,6 +23,8 @@ class ArithmeticProgression extends Progression implements NumericProgression {
 
     /**
      * @inheritdoc
+     * @param int $n
+     * @return float|int|string
      */
     public function getItem($n = 1)
     {
@@ -31,6 +33,8 @@ class ArithmeticProgression extends Progression implements NumericProgression {
 
     /**
      * @inheritdoc
+     * @param $length
+     * @return float|int
      */
     public function getSum($length)
     {
@@ -41,6 +45,8 @@ class ArithmeticProgression extends Progression implements NumericProgression {
 
     /**
      * @inheritdoc
+     * @param int $n
+     * @return array
      */
     public function getItems($n): array
     {
@@ -49,6 +55,8 @@ class ArithmeticProgression extends Progression implements NumericProgression {
 
     /**
      * @inheritdoc
+     * @param array $sequence
+     * @return bool
      */
     public static function isProgression(array $sequence): bool
     {
@@ -74,6 +82,8 @@ class ArithmeticProgression extends Progression implements NumericProgression {
 
     /**
      * @inheritdoc
+     * @param array $sequence
+     * @return mixed|null
      */
     public static function getDifference(array $sequence)
     {
