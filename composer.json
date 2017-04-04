@@ -1,10 +1,11 @@
 {
-  "name": "devtoolsparty/progression",
+  "name": "devtoolsparty/progres",
   "type": "library",
   "description": "Library for determining the type of sequence, and tools for working with progressions",
   "keywords": ["sequence", "progression"],
-  "homepage": "https://github.com/devtoolsparty/progression",
-  "minimum-stability": "stable",
+  "homepage": "https://github.com/devtoolsparty/progres",
+  "version": "1.0",
+  "minimum-stability": "dev",
   "license": "MIT",
   "authors": [
     {
@@ -20,5 +21,11 @@
   },
   "require-dev": {
     "phpunit/phpunit": "5.5.*"
-  }
+  },
+  "repositories":[
+    {
+      "type":"git",
+      "url":"http://github.com/devtoolsparty/progres"
+    }
+  ]
 }
