@@ -1,11 +1,11 @@
 <?php
 
-namespace DevToolsParty\Progression;
+namespace ToolsParty\Progression;
 
 /**
  * Class Progression
  * common properties for progressions
- * @package DevToolsParty\Progress
+ * @package ToolsParty\Progression
  */
 abstract class Progression {
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace DevToolsParty\Progression;
+namespace ToolsParty\Progression;
 
 /**
  * Class Utils
- * @package DevToolsParty\Progress
+ * @package ToolsParty\Progression
  */
 trait Utils {
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace DevToolsParty\Progression;
+namespace ToolsParty\Progression;
 
 /**
  * Class GeometricProgression
- * @package DevToolsParty\Progress
+ * @package ToolsParty\Progression
  */
 class GeometricProgression extends Progression implements NumericProgression {
 

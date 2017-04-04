@@ -13,7 +13,7 @@
     }
   ],
   "autoload": {
-    "psr-4": { "DevToolsParty\\Progression\\": "src/" }
+    "psr-4": { "ToolsParty\\Progression\\": "src/" }
   },
   "require": {
     "php": ">=7.0"

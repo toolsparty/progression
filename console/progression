@@ -8,10 +8,10 @@ require_once '../src/ArithmeticProgression.php';
 require_once '../src/GeometricProgression.php';
 require_once '../src/CharProgression.php';
 
-use DevToolsParty\Progression\Progression;
-use DevToolsParty\Progression\ArithmeticProgression;
-use DevToolsParty\Progression\GeometricProgression;
-use DevToolsParty\Progression\CharProgression;
+use ToolsParty\Progression\Progression;
+use ToolsParty\Progression\ArithmeticProgression;
+use ToolsParty\Progression\GeometricProgression;
+use ToolsParty\Progression\CharProgression;
 
 $delimiter = Progression::DEFAULT_DELIMITER;
 

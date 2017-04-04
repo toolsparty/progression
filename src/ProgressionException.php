@@ -1,10 +1,10 @@
 <?php
 
-namespace DevToolsParty\Progression;
+namespace ToolsParty\Progression;
 
 /**
  * Class ProgressionException
- * @package DevToolsParty\Progress
+ * @package ToolsParty\Progression
  */
 class ProgressionException extends \Exception {
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace DevToolsParty\Progression;
+namespace ToolsParty\Progression;
 
 /**
  * Interface NumericProgression It contains definitions for numerical progressions
- * @package DevToolsParty\Progress
+ * @package ToolsParty\Progression
  */
 interface NumericProgression {
     /**

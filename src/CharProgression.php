@@ -1,10 +1,10 @@
 <?php
 
-namespace DevToolsParty\Progression;
+namespace ToolsParty\Progression;
 
 /**
  * Class CharProgression
- * @package DevToolsParty\Progress
+ * @package ToolsParty\Progression
  */
 class CharProgression extends Progression {
 
